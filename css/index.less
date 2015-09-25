@@ -4,6 +4,7 @@
     src: url(../fonts/Oswald-Regular.ttf);
 }
 @font-button: 'Oswald', sans-serif;
+@color-cream: #ffffff;
 
 html{
 }
@@ -12,7 +13,7 @@ body{
 }
 
 #mainPage {
-    background-image:url('../images/hands.jpg');
+    background-image:url('../images/bulbs.jpg');
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-size: cover;
@@ -53,11 +54,58 @@ body{
     left: 10%;
 }
 
+#header {
+    position: absolute;
+    top: -110px;
+    left: 0;
+    right: 0;
+    height: 110px;
+    background-color: @color-cream;
+}
+
 #logo {
     position: absolute;
-    left: 10%;
-    top: 10%;
     width: 350px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0);
     padding: 10px 10px 10px 10px;
+    left: -350px;
+    // -webkit-animation: enter 750ms; /* Safari, Chrome and Opera > 12.1 */
+    //    -moz-animation: enter 750ms; /* Firefox < 16 */
+    //     -ms-animation: enter 750ms; /* Internet Explorer */
+    //      -o-animation: enter 750ms; /* Opera < 12.1 */
+    //         animation: enter 750ms;
+    // -webkit-animation-timing-function: ease-out;
+    //    -moz-animation-timing-function: ease-out;
+    //     -ms-animation-timing-function: ease-out;
+    //      -o-animation-timing-function: ease-out;
+    //         animation-timing-function: ease-out;
+    // -webkit-animation-play-state: paused;
+    //    -moz-animation-play-state: paused;
+    //     -ms-animation-play-state: paused;
+    //      -o-animation-play-state: paused;
+    //         animation-play-state: paused;
+    // @keyframes enter {
+    //     from { left: -350px; }
+    //     to   { left: 0; }
+    // }
+    // /* Firefox < 16 */
+    // @-moz-keyframes enter {
+    //     from { left: -350px; }
+    //     to   { left: 0; }
+    // }
+    // /* Safari, Chrome and Opera > 12.1 */
+    // @-webkit-keyframes enter {
+    //     from { left: -350px; }
+    //     to   { left: 0; }
+    // }
+    // /* Internet Explorer */
+    // @-ms-keyframes enter {
+    //     from { left: -350px; }
+    //     to   { left: 0; }
+    // }
+    // /* Opera < 12.1 */
+    // @-o-keyframes enter {
+    //     from { left: -350px; }
+    //     to   { left: 0; }
+    // }
 }

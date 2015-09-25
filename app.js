@@ -14,7 +14,12 @@ fallback.load({
     angular: [
         "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js",
         "libs/angular-1.3.15.min.js"
-]}, {
+    ],
+    'jQuery.easing.easeOutCubic': [
+        "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js",
+        "libs/jquery.easing.1.3.js"
+    ]
+}, {
     shim: {
         'jQuery.fn.modal': ['jQuery']
     },
@@ -34,6 +39,11 @@ fallback.load({
 
 fallback.ready(function() {
     var myApp = angular.module('myApp', []);
+    $(window).ready(function() {
+        $('#header').animate({ top: '0px' }, 1000, 'easeOutBounce', function() {
+            $('#logo').animate({ left: '0px' }, 750, 'easeOutCubic');
+        })
+    });
 });
     
 //myApp.config(function($routeProvider) {
