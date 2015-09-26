@@ -12,7 +12,7 @@ html{
 body{
 }
 
-#mainPage {
+#bg, #search-bg {
     background-image:url('../images/bulbs.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -69,43 +69,62 @@ body{
     background-color: rgba(255,255,255,0);
     padding: 10px 10px 10px 10px;
     left: -350px;
-    // -webkit-animation: enter 750ms; /* Safari, Chrome and Opera > 12.1 */
-    //    -moz-animation: enter 750ms; /* Firefox < 16 */
-    //     -ms-animation: enter 750ms; /* Internet Explorer */
-    //      -o-animation: enter 750ms; /* Opera < 12.1 */
-    //         animation: enter 750ms;
-    // -webkit-animation-timing-function: ease-out;
-    //    -moz-animation-timing-function: ease-out;
-    //     -ms-animation-timing-function: ease-out;
-    //      -o-animation-timing-function: ease-out;
-    //         animation-timing-function: ease-out;
-    // -webkit-animation-play-state: paused;
-    //    -moz-animation-play-state: paused;
-    //     -ms-animation-play-state: paused;
-    //      -o-animation-play-state: paused;
-    //         animation-play-state: paused;
-    // @keyframes enter {
-    //     from { left: -350px; }
-    //     to   { left: 0; }
-    // }
-    // /* Firefox < 16 */
-    // @-moz-keyframes enter {
-    //     from { left: -350px; }
-    //     to   { left: 0; }
-    // }
-    // /* Safari, Chrome and Opera > 12.1 */
-    // @-webkit-keyframes enter {
-    //     from { left: -350px; }
-    //     to   { left: 0; }
-    // }
-    // /* Internet Explorer */
-    // @-ms-keyframes enter {
-    //     from { left: -350px; }
-    //     to   { left: 0; }
-    // }
-    // /* Opera < 12.1 */
-    // @-o-keyframes enter {
-    //     from { left: -350px; }
-    //     to   { left: 0; }
-    // }
 }
+
+#filter {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 99;
+
+    /* Pull the background 70px higher to the same place as #bg's */
+    background-position: center -70px;
+
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+
+#bg {
+  background-position: center top;
+  padding: 250px 190px 120px 190px;
+}
+
+#search-container {
+  position: relative;
+}
+
+#search-bg {
+  /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 99;
+
+  /* Pull the background 70px higher to the same place as #bg's */
+  background-position: center -70px;
+
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+
+#search {
+  /* Put this on top of the blurred layer */
+  position: relative;
+  z-index: 100;
+  padding: 20px;
+  background: rgb(34,34,34); /* for IE */
+  background: rgba(34,34,34,0.75);
+}
+
+@media (max-width: 600px ) {
+  #bg { padding: 10px; }
+  #search-bg { background-position: center -10px; }
+}
+
+#search h2, #search h5, #search h5 a { text-align: center; color: #fefefe; font-weight: normal; }
+#search h2 { margin-bottom: 50px }
+#search h5 { margin-top: 100px }

@@ -21,7 +21,8 @@ fallback.load({
     ]
 }, {
     shim: {
-        'jQuery.fn.modal': ['jQuery']
+        'jQuery.fn.modal': ['jQuery'],
+        'jQuery.easing.easeOutCubic': ['jQuery'],
     },
 
     callback: function(success, failed) {
