@@ -16,7 +16,7 @@
   left: 0;
   right: 0;
 }
-#search-bg {
+#popup-bg {
   background-image: url('../images/bulbs.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -69,11 +69,11 @@
   background-position: center top;
   padding: 200px 250px 120px 250px;
 }
-#search-container {
+#popup-container {
   position: relative;
 }
-#search-bg {
-  /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */
+#popup-bg {
+  /* Absolutely position it, but stretch it to all four corners, then put it just behind #popup's z-index */
   position: absolute;
   top: 0px;
   right: 0px;
@@ -85,7 +85,7 @@
   -webkit-filter: blur(10px);
   filter: blur(10px);
 }
-#search {
+#popup {
   /* Put this on top of the blurred layer */
   position: relative;
   z-index: 100;
@@ -95,7 +95,7 @@
   background: rgba(34, 34, 34, 0.75);
   border-radius: 10px;
 }
-#search img {
+#popup img {
   width: 300px;
   margin-right: auto;
   margin-left: auto;
@@ -106,18 +106,18 @@
   #bg {
     padding: 10px;
   }
-  #search-bg {
+  #popup-bg {
     background-position: center -10px;
   }
 }
-#search h2,
-#search h5,
-#search h5 a {
+#popup h2,
+#popup h5,
+#popup h5 a {
   text-align: center;
   color: #fefefe;
   font-weight: normal;
 }
-#search h2 {
+#popup h2 {
   margin-bottom: 50px;
   -webkit-margin-before: 0em;
   -webkit-margin-after: .2em;
@@ -127,6 +127,6 @@
 #subtext {
   font-size: 14px;
 }
-#search h5 {
+#popup h5 {
   margin-top: 30px;
 }

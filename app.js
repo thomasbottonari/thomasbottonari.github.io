@@ -46,14 +46,16 @@ fallback.ready(function() {
         })
     });
 
-        var width = $('#bg').outerWidth();
-            console.debug(width);
-            $('#search-bg').css('background-size', width+'px auto');
+    // ensure that the popup image width matches the bg image width which is set to 'cover'
+    var width = $('#bg').outerWidth();
+    console.debug(width);
+    $('#popup-bg').css('background-size', width+'px auto');
 
     $(window).resize(function() {
+        // ensure that the popup image width matches the bg image width which is set to 'cover'
         var width = $('#bg').outerWidth();
         console.debug(width);
-        $('#search-bg').css('background-size', width+'px auto');
+        $('#popup-bg').css('background-size', width+'px auto');
     })
 });
     
