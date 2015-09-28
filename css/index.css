@@ -2,8 +2,7 @@
   font-family: 'Oswald';
   src: url(../fonts/Oswald-Regular.ttf);
 }
-#bg,
-#search-bg {
+#bg {
   background-image: url('../images/bulbs.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -11,6 +10,16 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#search-bg {
+  background-image: url('../images/bulbs.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -58,21 +67,9 @@
   padding: 10px 10px 10px 10px;
   left: -350px;
 }
-#filter {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  z-index: 99;
-  /* Pull the background 70px higher to the same place as #bg's */
-  background-position: center -70px;
-  -webkit-filter: blur(10px);
-  filter: blur(10px);
-}
 #bg {
   background-position: center top;
-  padding: 250px 190px 120px 190px;
+  padding: 200px 250px 120px 250px;
 }
 #search-container {
   position: relative;
@@ -86,7 +83,7 @@
   left: 0px;
   z-index: 99;
   /* Pull the background 70px higher to the same place as #bg's */
-  background-position: center -70px;
+  background-position: center -200px;
   -webkit-filter: blur(10px);
   filter: blur(10px);
 }
@@ -98,6 +95,14 @@
   background: #222222;
   /* for IE */
   background: rgba(34, 34, 34, 0.75);
+  border-radius: 10px;
+}
+#search img {
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  display: block;
 }
 @media (max-width: 600px) {
   #bg {
@@ -118,5 +123,5 @@
   margin-bottom: 50px;
 }
 #search h5 {
-  margin-top: 100px;
+  margin-top: 30px;
 }

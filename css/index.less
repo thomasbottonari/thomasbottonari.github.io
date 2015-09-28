@@ -12,7 +12,7 @@ html{
 body{
 }
 
-#bg, #search-bg {
+#bg {
     background-image:url('../images/bulbs.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -20,6 +20,14 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+#search-bg {
+    background-image:url('../images/bulbs.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
 }
@@ -71,7 +79,17 @@ body{
     left: -350px;
 }
 
-#filter {
+#bg {
+    background-position: center top;
+    padding: 200px 250px 120px 250px;
+}
+
+#search-container {
+    position: relative;
+}
+
+#search-bg {
+    /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */
     position: absolute;
     top: 0px;
     right: 0px;
@@ -80,51 +98,35 @@ body{
     z-index: 99;
 
     /* Pull the background 70px higher to the same place as #bg's */
-    background-position: center -70px;
+    background-position: center -200px;
 
     -webkit-filter: blur(10px);
     filter: blur(10px);
 }
 
-#bg {
-  background-position: center top;
-  padding: 250px 190px 120px 190px;
-}
-
-#search-container {
-  position: relative;
-}
-
-#search-bg {
-  /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  z-index: 99;
-
-  /* Pull the background 70px higher to the same place as #bg's */
-  background-position: center -70px;
-
-  -webkit-filter: blur(10px);
-  filter: blur(10px);
-}
-
 #search {
-  /* Put this on top of the blurred layer */
-  position: relative;
-  z-index: 100;
-  padding: 20px;
-  background: rgb(34,34,34); /* for IE */
-  background: rgba(34,34,34,0.75);
+    /* Put this on top of the blurred layer */
+    position: relative;
+    z-index: 100;
+    padding: 20px;
+    background: rgb(34,34,34); /* for IE */
+    background: rgba(34,34,34,0.75);
+    border-radius: 10px;
+
+    img {
+        width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        display: block;
+    }
 }
 
 @media (max-width: 600px ) {
-  #bg { padding: 10px; }
-  #search-bg { background-position: center -10px; }
+    #bg { padding: 10px; }
+    #search-bg { background-position: center -10px; }
 }
 
 #search h2, #search h5, #search h5 a { text-align: center; color: #fefefe; font-weight: normal; }
 #search h2 { margin-bottom: 50px }
-#search h5 { margin-top: 100px }
+#search h5 { margin-top: 30px }

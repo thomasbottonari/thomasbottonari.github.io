@@ -45,6 +45,16 @@ fallback.ready(function() {
             $('#logo').animate({ left: '0px' }, 750, 'easeOutCubic');
         })
     });
+
+        var width = $('#bg').outerWidth();
+            console.debug(width);
+            $('#search-bg').css('background-size', width+'px auto');
+
+    $(window).resize(function() {
+        var width = $('#bg').outerWidth();
+        console.debug(width);
+        $('#search-bg').css('background-size', width+'px auto');
+    })
 });
     
 //myApp.config(function($routeProvider) {
