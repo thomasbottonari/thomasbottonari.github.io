@@ -1,5 +1,9 @@
 #bg {
+  background-image: url('../images/bulbs.jpg');
   padding: 200px 30px 120px 30px;
+}
+#popup-bg {
+  background-image: url('../images/bulbs.jpg');
 }
 #popup img {
   width: 200px;

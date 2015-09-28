@@ -67,6 +67,9 @@ fallback.ready(function() {
 
     $(window).resize(resizeBlur);
 
+    // this is needed to use active button states in safari mobile
+    document.addEventListener("touchstart", function() {},false);
+
     // var app = angular.module('myApp', []);
     myApp.controller('navbarController', function($scope) {
         var isOpen = false;
