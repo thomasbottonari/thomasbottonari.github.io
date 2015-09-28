@@ -26,31 +26,29 @@
   left: 0;
   right: 0;
 }
-.stackedButton {
-  display: block;
+.menuButton {
+  display: inline-block;
   position: relative;
-  clear: both;
-  width: 100%;
+  width: 200px;
   height: 50px;
-  margin-bottom: 30px;
-  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 30px;
+  background-color: rgba(0, 0, 0, 0.65);
   font-family: 'Oswald', sans-serif;
   color: white;
   font-size: 20px;
   letter-spacing: 2px;
   border: none;
+  border-radius: 5px;
 }
-.stackedButton:hover {
+.menuButton:hover {
   background-color: black;
 }
-.stackedButton:focus {
+.menuButton:focus {
   outline: none;
 }
 #buttonGroup {
-  width: 200px;
   position: absolute;
-  top: 50%;
-  left: 10%;
+  right: 10px;
 }
 #header {
   position: absolute;
@@ -121,6 +119,13 @@
 }
 #search h2 {
   margin-bottom: 50px;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: .2em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+#subtext {
+  font-size: 14px;
 }
 #search h5 {
   margin-top: 30px;

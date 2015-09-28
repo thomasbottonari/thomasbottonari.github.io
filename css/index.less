@@ -32,19 +32,19 @@ body{
     top: 0; bottom: 0; left: 0; right: 0;
 }
 
-.stackedButton {
-    display: block;
+.menuButton {
+    display: inline-block;
     position: relative;
-    clear: both;
-    width: 100%;
+    width: 200px;
     height: 50px;
-    margin-bottom: 30px;
-    background-color: rgba(0,0,0,0.5);
+    margin-top: 30px;
+    background-color: rgba(0,0,0,0.65);
     font-family: @font-button;
     color: white;
     font-size: 20px;
     letter-spacing: 2px;
     border: none;
+    border-radius: 5px;
     
     &:hover {
         background-color: black;
@@ -56,10 +56,8 @@ body{
 }
 
 #buttonGroup {
-    width: 200px;
     position: absolute;
-    top: 50%;
-    left: 10%;
+    right: 10px;
 }
 
 #header {
@@ -128,5 +126,15 @@ body{
 }
 
 #search h2, #search h5, #search h5 a { text-align: center; color: #fefefe; font-weight: normal; }
-#search h2 { margin-bottom: 50px }
+#search h2 { 
+    margin-bottom: 50px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: .2em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+#subtext { 
+    font-size: 14px; 
+
+}
 #search h5 { margin-top: 30px }
