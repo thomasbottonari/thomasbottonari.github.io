@@ -19,14 +19,14 @@ fallback.load({
         "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js",
         "libs/jquery.easing.1.3.js"
     ],
-    // 'angular.controller("navbarController")': [
-    //     "pages/navbar.js"
-    // ]
+    navbarController: [
+        "pages/navbar.js"
+    ]
 }, {
     shim: {
         'jQuery.fn.modal': ['jQuery'],
         'jQuery.easing.easeOutCubic': ['jQuery'],
-        'angular.controller("navbarController")': ['angular'],
+        navbarController: ['angular'],
     },
 
     callback: function(success, failed) {
