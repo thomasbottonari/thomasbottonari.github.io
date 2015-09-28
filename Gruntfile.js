@@ -45,6 +45,8 @@ module.exports = function(grunt) {
         files: {
           "css/index.css": "css/index.less",
           "css/indexLarge.css": "css/indexLarge.less",
+          "css/indexMedium.css": "css/indexMedium.less",
+          "css/indexMobile.css": "css/indexMobile.less",
         }
       },
       prod: {
@@ -53,6 +55,8 @@ module.exports = function(grunt) {
         files: {
             "build/css/index.css": "css/index.less",
             "build/css/indexLarge.css": "css/indexLarge.less",
+            "build/css/indexMedium.css": "css/indexMedium.less",
+            "build/css/indexMobile.css": "css/indexMobile.less",
         }
       }
     },

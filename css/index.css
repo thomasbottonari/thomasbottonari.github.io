@@ -104,14 +104,6 @@
   position: relative;
   display: block;
 }
-@media (max-width: 600px) {
-  #bg {
-    padding: 10px;
-  }
-  #popup-bg {
-    background-position: center -10px;
-  }
-}
 #popup h2,
 #popup h5,
 #popup h5 a {

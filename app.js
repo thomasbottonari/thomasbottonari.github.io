@@ -46,15 +46,22 @@ fallback.ready(function() {
         })
     });
 
-    // ensure that the popup image width matches the bg image width which is set to 'cover'
-    var width = $('#bg').outerWidth();
-    $('#popup-bg').css('background-size', width+'px auto');
-
-    $(window).resize(function() {
-        // ensure that the popup image width matches the bg image width which is set to 'cover'
+    // ensure that the popup image size matches the bg image size - which is set to 'cover'
+    function resizeBlur() {
+        var aspectRatio = 1.5;
         var width = $('#bg').outerWidth();
-        $('#popup-bg').css('background-size', width+'px auto');
-    })
+        var height = $('#bg').outerHeight();
+        if (width/height >= aspectRatio) {
+            $('#popup-bg').css('background-size', width + 'px auto');
+        } else {
+            $('#popup-bg').css('background-size', 'auto ' + height + 'px');
+        }
+    }
+    
+    // resize once on init
+    resizeBlur();
+
+    $(window).resize(resizeBlur);
 });
     
 //myApp.config(function($routeProvider) {
