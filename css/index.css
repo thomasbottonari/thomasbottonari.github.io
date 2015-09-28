@@ -2,6 +2,9 @@
   font-family: 'Oswald';
   src: url(../fonts/Oswald-Regular.ttf);
 }
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 #bg {
   background-image: url('../images/bulbs.jpg');
   background-repeat: no-repeat;
