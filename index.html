@@ -16,8 +16,11 @@
     </head>
     <body>
         <div id="bg" >
-            <div id="header">
-                <img id="logo" src="images/doornboschbros_logo.png" />
+            <div id="header" ng-controller="navbarController">
+                <div id="headerBg">
+                    <img id="logo" src="images/doornboschbros_logo.png" />
+                    <button type="button" class="hamburgerButton" ng-click="toggleMenu()"></button>
+                </div>
                 <div id="buttonGroup">
                     <button type="button" class="menuButton">flowers</button>
                     <button type="button" class="menuButton">requests</button>

@@ -18,11 +18,15 @@ fallback.load({
     'jQuery.easing.easeOutCubic': [
         "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js",
         "libs/jquery.easing.1.3.js"
-    ]
+    ],
+    // 'angular.controller("navbarController")': [
+    //     "pages/navbar.js"
+    // ]
 }, {
     shim: {
         'jQuery.fn.modal': ['jQuery'],
         'jQuery.easing.easeOutCubic': ['jQuery'],
+        'angular.controller("navbarController")': ['angular'],
     },
 
     callback: function(success, failed) {
@@ -62,6 +66,23 @@ fallback.ready(function() {
     resizeBlur();
 
     $(window).resize(resizeBlur);
+
+    // var app = angular.module('myApp', []);
+    myApp.controller('navbarController', function($scope) {
+        var isOpen = false;
+        $scope.toggleMenu = function() {
+            if (isOpen) {
+                $('#buttonGroup').animate({top: 110 - $('#buttonGroup').height()}, 500, 'easeOutCirc', function() {
+                    $('#buttonGroup').css('visibility','hidden');
+                });
+            } else {
+                $('#buttonGroup').css('visibility','visible');
+                $('#buttonGroup').css('top',110 - $('#buttonGroup').height());
+                $('#buttonGroup').animate({top: '110px'}, 500, 'easeOutCirc');
+            }
+            isOpen = !isOpen;
+        }
+    });
 });
     
 //myApp.config(function($routeProvider) {

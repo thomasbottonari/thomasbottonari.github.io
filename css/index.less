@@ -59,7 +59,9 @@ body{
 #buttonGroup {
     position: absolute;
     right: 10px;
-    margin-top: 30px;
+    top: 30px;
+    visibility: visible;
+    z-index: 1100;
 }
 
 #header {
@@ -68,7 +70,13 @@ body{
     left: 0;
     right: 0;
     height: 110px;
+    z-index: 1000;
+}
+
+#headerBg {
     background-color: @color-cream;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
 }
 
 #logo {
@@ -95,7 +103,7 @@ body{
     right: 0px;
     bottom: 0px;
     left: 0px;
-    z-index: 99;
+    z-index: 49;
 
     /* Pull the background 70px higher to the same place as #bg's */
     background-position: center -200px;
@@ -107,7 +115,7 @@ body{
 #popup {
     /* Put this on top of the blurred layer */
     position: relative;
-    z-index: 100;
+    z-index: 50;
     padding: 20px;
     background: rgb(34,34,34); /* for IE */
     background: rgba(34,34,34,0.65);
@@ -135,3 +143,23 @@ body{
 
 }
 #popup h5 { margin-top: 30px }
+
+.hamburgerButton {
+    background: url(../images/hamburgerIcon_inactive.png) no-repeat top;
+    background-size: contain;
+    display: block;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 10px;
+    border: none;
+    outline: none;
+    top: 20px;
+    visibility: hidden;
+
+    &:active {
+    background: url(../images/hamburgerIcon_active.png) no-repeat top;
+    background-size: contain;
+    top: 20px;
+}
+}

@@ -50,7 +50,9 @@
 #buttonGroup {
   position: absolute;
   right: 10px;
-  margin-top: 30px;
+  top: 30px;
+  visibility: visible;
+  z-index: 1100;
 }
 #header {
   position: absolute;
@@ -58,7 +60,15 @@
   left: 0;
   right: 0;
   height: 110px;
+  z-index: 1000;
+}
+#headerBg {
   background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 #logo {
   position: absolute;
@@ -81,7 +91,7 @@
   right: 0px;
   bottom: 0px;
   left: 0px;
-  z-index: 99;
+  z-index: 49;
   /* Pull the background 70px higher to the same place as #bg's */
   background-position: center -200px;
   -webkit-filter: blur(10px);
@@ -90,7 +100,7 @@
 #popup {
   /* Put this on top of the blurred layer */
   position: relative;
-  z-index: 100;
+  z-index: 50;
   padding: 20px;
   background: #222222;
   /* for IE */
@@ -123,4 +133,22 @@
 }
 #popup h5 {
   margin-top: 30px;
+}
+.hamburgerButton {
+  background: url(../images/hamburgerIcon_inactive.png) no-repeat top;
+  background-size: contain;
+  display: block;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  right: 10px;
+  border: none;
+  outline: none;
+  top: 20px;
+  visibility: hidden;
+}
+.hamburgerButton:active {
+  background: url(../images/hamburgerIcon_active.png) no-repeat top;
+  background-size: contain;
+  top: 20px;
 }

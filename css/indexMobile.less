@@ -1,9 +1,46 @@
 #bg {
     padding: 200px 30px 120px 30px;
+    // z-index: -1000;
 }
 
 #popup {
     img {
         width: 200px;
+    }
+}
+
+#buttonGroup {
+    position: absolute;
+    right: 0px;
+    margin-top: 0px;
+    width: 100%;
+    z-index: -1;
+    visibility: hidden;
+}
+
+.hamburgerButton {
+    visibility: visible;
+}
+
+#logo {
+    position: absolute;
+    width: 275px;
+    background-color: rgba(255,255,255,0);
+    padding: 10px 10px 10px 10px;
+    left: -275px;
+    top: 15px;
+}
+
+.menuButton {
+    display: block;
+    clear: both;
+    width: 100%;
+    border-radius: 0px;
+    margin-left: 0px;
+    background-color: rgba(0,0,0,1.0);
+
+    &:active {
+        background-color: rgba(255,255,255,1);
+        color: black;
     }
 }
