@@ -41,22 +41,18 @@ module.exports = function(grunt) {
     less: {
       dev: {
         options: {
-          paths: ["css"]
         },
         files: {
-          "css/index.css": "css/index.less"
+          "css/index.css": "css/index.less",
+          "css/indexLarge.css": "css/indexLarge.less",
         }
       },
       prod: {
         options: {
-          paths: ["css"],
-          // plugins: [
-          //   new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]}),
-          //   new (require('less-plugin-clean-css'))(cleanCssOptions)
-          // ]
         },
         files: {
             "build/css/index.css": "css/index.less",
+            "build/css/indexLarge.css": "css/indexLarge.less",
         }
       }
     },
