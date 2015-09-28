@@ -19,14 +19,18 @@ fallback.load({
         "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js",
         "libs/jquery.easing.1.3.js"
     ],
+    'angular.module("ngRoute")': [
+        "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js"
+    ],
     navbarController: [
-        "pages/navbar.js"
+        "controllers/navbar.js"
     ]
 }, {
     shim: {
         'jQuery.fn.modal': ['jQuery'],
         'jQuery.easing.easeOutCubic': ['jQuery'],
         navbarController: ['angular'],
+        'angular.module("ngRoute")': ['angular'],
     },
 
     callback: function(success, failed) {
@@ -43,7 +47,6 @@ fallback.load({
 });
 
 fallback.ready(function() {
-    var myApp = angular.module('myApp', []);
     $(window).ready(function() {
         $('#header').animate({ top: '0px' }, 1000, 'easeOutBounce', function() {
             $('#logo').animate({ left: '0px' }, 750, 'easeOutCubic');
@@ -70,21 +73,11 @@ fallback.ready(function() {
     // this is needed to use active button states in safari mobile
     document.addEventListener("touchstart", function() {},false);
 
-    // var app = angular.module('myApp', []);
-    myApp.controller('navbarController', function($scope) {
-        var isOpen = false;
-        $scope.toggleMenu = function() {
-            if (isOpen) {
-                $('#buttonGroup').animate({top: 110 - $('#buttonGroup').height()}, 500, 'easeOutCirc', function() {
-                    $('#buttonGroup').css('visibility','hidden');
-                });
-            } else {
-                $('#buttonGroup').css('visibility','visible');
-                $('#buttonGroup').css('top',110 - $('#buttonGroup').height());
-                $('#buttonGroup').animate({top: '110px'}, 500, 'easeOutCirc');
-            }
-            isOpen = !isOpen;
-        }
+
+    var myApp = angular.module('myApp');
+    myApp.config(function ($routeProvider) {
+        $routeProvider
+        .when('/', {templateURL: '/pages/main.html'})
     });
 });
     

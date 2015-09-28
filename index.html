@@ -15,36 +15,29 @@
         <script src="app.js"></script>
     </head>
     <body>
-        <div id="bg" >
-            <div id="header" ng-controller="navbarController">
-                <div id="headerBg">
-                    <img id="logo" src="images/doornboschbros_logo.png" />
-                    <button type="button" class="hamburgerButton" ng-click="toggleMenu()"></button>
-                </div>
-                <div id="buttonGroup">
-                    <button type="button" class="menuButton">flowers</button>
-                    <button type="button" class="menuButton">requests</button>
-                    <button type="button" class="menuButton">about us</button>
-                </div>
+        <div id="header" ng-controller="navbarController">
+            <div id="headerBg">
+                <img id="logo" src="images/doornboschbros_logo.png" />
+                <button type="button" class="hamburgerButton" ng-click="toggleMenu()"></button>
             </div>
-            <div id="popup-container">
-                <div id="popup-bg"></div>
-                <div id="popup">
-                    <img src="images/infographic2.png"/>
-                    <h2>Setup your fundraisor today!</h2>
-                    <h2 id="subtext">and make the world a more beautiful place</h2>
-                    <h5><a href="#">How it works »</a></h5>
-                </div>
+            <div id="buttonGroup">
+                <button type="button" class="menuButton">flowers</button>
+                <button type="button" class="menuButton">requests</button>
+                <button type="button" class="menuButton">about us</button>
             </div>
         </div>
 
-<!--
-        <div class="container">
-
-            <div ng-view></div>
-            
+        <!-- <div ng-view></div> -->
+<div id="bg" >
+    <div id="popup-container">
+        <div id="popup-bg"></div>
+        <div id="popup">
+            <img src="images/infographic2.png"/>
+            <h2>Setup your fundraisor today!</h2>
+            <h2 id="subtext">and make the world a more beautiful place</h2>
+            <h5><a href="#">How it works »</a></h5>
         </div>
--->
-
+    </div>
+</div>
     </body>
 </html>

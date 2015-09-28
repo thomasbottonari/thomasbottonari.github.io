@@ -1,4 +1,4 @@
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['ngRoute']);
 var navbarController = true;
 app.controller('navbarController', function($scope) {
     var isOpen = false;
